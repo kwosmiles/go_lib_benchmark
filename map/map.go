@@ -6,14 +6,20 @@ import (
 
 	ooocmap "github.com/OneOfOne/cmap"
 	"github.com/alphadose/haxmap"
+	"github.com/antoniomo/shardedmap"
 	"github.com/cornelk/hashmap"
 	"github.com/dustinxie/lockfree"
 	ecmap "github.com/easierway/concurrent_map"
 	fcmap "github.com/fanliao/go-concurrentMap"
+	hcmap "github.com/hfdpx/ConcurrentHashMap"
+	"github.com/kazu/skiplistmap"
 	lcmap "github.com/lrita/cmap"
 	csmap "github.com/mhmtszr/concurrent-swiss-map"
+	mcmap "github.com/mojinfu/cmap"
 	ocmap "github.com/orcaman/concurrent-map"
+	rcmap "github.com/rfyiamcool/ccmap"
 	"github.com/tidwall/shardmap"
+	xcmap "github.com/xiao7737/concurrentMap"
 	"github.com/zhangyunhao116/skipmap"
 )
 
@@ -362,5 +368,111 @@ func (m *OneOfOneLibrary) Set(key string, value interface{}) {
 func NewOneOfOneLibrary() *OneOfOneLibrary {
 	return &OneOfOneLibrary{
 		internal: ooocmap.New(),
+	}
+}
+
+type AntoniomoLibrary struct {
+	internal *shardedmap.StrMap
+}
+
+func (m *AntoniomoLibrary) Get(key string) (interface{}, bool) {
+	return m.internal.Load(key)
+}
+
+func (m *AntoniomoLibrary) Set(key string, value interface{}) {
+	m.internal.Store(key, value)
+}
+
+func NewAntoniomoLibrary() *AntoniomoLibrary {
+	return &AntoniomoLibrary{
+		internal: shardedmap.NewStrMap(64),
+	}
+}
+
+type HfdpxLibrary struct {
+	internal hcmap.ConcurrentHashMap
+}
+
+func (m *HfdpxLibrary) Get(key string) (interface{}, bool) {
+	return m.internal.Get(key)
+}
+
+func (m *HfdpxLibrary) Set(key string, value interface{}) {
+	m.internal.Set(key, value)
+}
+
+func NewHfdpxLibrary() *HfdpxLibrary {
+	return &HfdpxLibrary{
+		internal: hcmap.New(),
+	}
+}
+
+type MojinfuLibrary struct {
+	internal mcmap.Map
+}
+
+func (m *MojinfuLibrary) Get(key string) (interface{}, bool) {
+	return m.internal.Load(key)
+}
+
+func (m *MojinfuLibrary) Set(key string, value interface{}) {
+	m.internal.Store(key, value)
+}
+
+func NewMojinfuLibrary() *MojinfuLibrary {
+	return &MojinfuLibrary{}
+}
+
+type Xiao7737Library struct {
+	internal *xcmap.ConcurrentMap
+}
+
+func (m *Xiao7737Library) Get(key string) (interface{}, bool) {
+	return m.internal.Get(StrKey(key))
+}
+
+func (m *Xiao7737Library) Set(key string, value interface{}) {
+	m.internal.Set(StrKey(key), value)
+}
+
+func NewXiao7737Library() *Xiao7737Library {
+	return &Xiao7737Library{
+		internal: xcmap.CreateConcurrentMap(128),
+	}
+}
+
+type RfyiamcoolLibrary struct {
+	internal *rcmap.SyncMap
+}
+
+func (m *RfyiamcoolLibrary) Get(key string) (interface{}, bool) {
+	return m.internal.Get(key)
+}
+
+func (m *RfyiamcoolLibrary) Set(key string, value interface{}) {
+	m.internal.Set(key, value)
+}
+
+func NewRfyiamcoolLibrary() *RfyiamcoolLibrary {
+	return &RfyiamcoolLibrary{
+		internal: rcmap.New(),
+	}
+}
+
+type KazuLibrary struct {
+	internal *skiplistmap.Map
+}
+
+func (m *KazuLibrary) Get(key string) (interface{}, bool) {
+	return m.internal.Get(key)
+}
+
+func (m *KazuLibrary) Set(key string, value interface{}) {
+	m.internal.Set(key, value)
+}
+
+func NewKazuLibrary() *KazuLibrary {
+	return &KazuLibrary{
+		internal: skiplistmap.New(),
 	}
 }

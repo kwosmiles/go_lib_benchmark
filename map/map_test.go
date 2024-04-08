@@ -143,12 +143,12 @@ func benchmark(b *testing.B, m ConcurrentMap) {
 	benchmarkMapMix(b, m)
 }
 
-func BenchmarkOrignMutexMap(b *testing.B) {
-	benchmark(b, NewOriginMutexMap())
+func BenchmarkOrignMap_WithRWMutex(b *testing.B) {
+	benchmark(b, NewOriginRWMutexMap())
 }
 
-func BenchmarkOrignRWMutexMap(b *testing.B) {
-	benchmark(b, NewOriginRWMutexMap())
+func BenchmarkOrignMap_WithMutex(b *testing.B) {
+	benchmark(b, NewOriginMutexMap())
 }
 
 func BenchmarkSyncMap(b *testing.B) {
@@ -167,7 +167,7 @@ func BenchmarkTidwall_shardmap(b *testing.B) {
 	benchmark(b, NewTidwallLibrary())
 }
 
-/* failed
+/* init cost for more than 10 minutes
 func BenchmarkCornelk_hashmap(b *testing.B) {
 	benchmark(b, NewCornelkLibrary())
 }
@@ -200,3 +200,29 @@ func BenchmarkLrita_cmap(b *testing.B) {
 func BenchmarkOneOfOne_cmap(b *testing.B) {
 	benchmark(b, NewOneOfOneLibrary())
 }
+
+func BenchmarkAntoniomo_shardedmap(b *testing.B) {
+	benchmark(b, NewAntoniomoLibrary())
+}
+
+func BenchmarkHfdpx_chashmap(b *testing.B) {
+	benchmark(b, NewHfdpxLibrary())
+}
+
+func BenchmarkMojinfu_cmap(b *testing.B) {
+	benchmark(b, NewMojinfuLibrary())
+}
+
+func BenchmarkXiao7737_cmap(b *testing.B) {
+	benchmark(b, NewXiao7737Library())
+}
+
+func BenchmarkRfyiamcool_cmap(b *testing.B) {
+	benchmark(b, NewRfyiamcoolLibrary())
+}
+
+/* can not set interface{}
+func BenchmarkKazu_skiplistmap(b *testing.B) {
+	benchmark(b, NewKazuLibrary())
+}
+*/
