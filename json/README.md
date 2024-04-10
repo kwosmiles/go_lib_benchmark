@@ -3,10 +3,14 @@ init []byte with length:350bytes,1.5k,30k
 then test the marshal and unmarshal of json libs
 
 ## benchmark libs:
-github.com/mailru/easyjson
+```github.com/mailru/easyjson
 github.com/bytedance/sonic
 github.com/json-iterator/go
 github.com/pquerna/ffjson/ffjson
+```
+## compare result:
+1st: Mailru_easyjson
+2st: Pquerna_ffjson
 
 ## running
 ```

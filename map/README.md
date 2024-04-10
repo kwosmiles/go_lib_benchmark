@@ -4,7 +4,7 @@ collect from https://github.com/s0lesurviv0r/go-concurrent-map-bench
 add more concurrent lib with 10 more stars
 
 ## benchmark libs:
-go origin map with RWMutex
+```go origin map with RWMutex
 go origin map with Mutex
 github.com/OneOfOne/cmap
 github.com/alphadose/haxmap
@@ -23,7 +23,7 @@ github.com/mojinfu/cmap
 github.com/xiao7737/concurrentMap
 github.com/rfyiamcool/ccmap
 github.com/kazu/skiplistmap -- can not set interface
-
+```
 ## running
 ```
 go test --bench .
