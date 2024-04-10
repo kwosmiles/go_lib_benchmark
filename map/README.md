@@ -26,7 +26,7 @@ github.com/kazu/skiplistmap -- can not set interface
 
 ## running
 ```
-go test --bench=.
+go test --bench .
 ```
 ## result
 ```
