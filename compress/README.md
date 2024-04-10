@@ -14,7 +14,8 @@ go test --bench . --benchmem
 ```
 
 ## result
-```[ origin zlib ] compress rate small: 0.78 ;medium: 0.444 ;big: 0.1719
+```
+[ origin zlib ] compress rate small: 0.78 ;medium: 0.444 ;big: 0.1719
 goos: linux
 goarch: amd64
 pkg: golibbenchmark/compress
