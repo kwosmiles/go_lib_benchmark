@@ -1,7 +1,7 @@
-github.com/Cergoo/gol v0.0.0-20160401074418-54aa8b3b8678 h1:TwShnJLQpEX/iX1+t+x4YEWmMmCf+lTWuZe5ly+rLVI=
-github.com/Cergoo/gol v0.0.0-20160401074418-54aa8b3b8678/go.mod h1:673pZL6Y3qneCRSfjWIAWRz1xuwrHIFrMMA297G6oRo=
 github.com/CosmWasm/tinyjson v0.9.0 h1:sPjgikATp5W0vD/v/Qz99uQ6G/lh/SuK0Wfskqua4Co=
 github.com/CosmWasm/tinyjson v0.9.0/go.mod h1:5+7QnSKrkIWnpIdhUT2t2EYzXnII3/3MlM0oDsBSbc8=
+github.com/DataDog/zstd v1.5.5 h1:oWf5W7GtOLgp6bciQYDmhHHjdhYkALu6S/5Ni9ZgSvQ=
+github.com/DataDog/zstd v1.5.5/go.mod h1:g4AWEaM3yOg3HYfnJ3YIawPnVdXJh9QME85blwSAmyw=
 github.com/LK4D4/trylock v0.0.0-20191027065348-ff7e133a5c54 h1:sg9CWNOhr58hMGmJ0q7x7jQ/B1RK/GyHNmeaYCJos9M=
 github.com/OneOfOne/cmap v0.0.0-20170825200327-ccaef7657ab8 h1:LvJrjPfvQXehyO8Vs6HK2X1jbL+8cKA5R84gj8+IIi0=
 github.com/OneOfOne/cmap v0.0.0-20170825200327-ccaef7657ab8/go.mod h1:jQmVrGXGFu7sbAteKCQgJWfTJbEHUaxGw4EKV0AQxIU=
@@ -53,6 +53,8 @@ github.com/kazu/loncha v0.4.11 h1:IcBkwTFPgi+T5vr6KsQM3qTEkD2quWiMj8d4gQfrT04=
 github.com/kazu/loncha v0.4.11/go.mod h1:25zkNEnAanUtYnSmApyGoJOQ96tByBur+ZI8oiSF4y8=
 github.com/kazu/skiplistmap v0.7.3 h1:XnaJdwU4pLbCkQjllIRm7oU/qBxQcAwpyRj/v+qSrpE=
 github.com/kazu/skiplistmap v0.7.3/go.mod h1:EVswJfDd7Vwnxk31NYq6Fm02nHCYxGHdoxYzScLQBi0=
+github.com/klauspost/compress v1.17.8 h1:YcnTYrq7MikUT7k0Yb5eceMmALQPYBW/Xltxn0NAMnU=
+github.com/klauspost/compress v1.17.8/go.mod h1:Di0epgTjJY877eYKx5yC51cX2A2Vl2ibi7bDH9ttBbw=
 github.com/klauspost/cpuid/v2 v2.0.9 h1:lgaqFMSdTdQYdZ04uHyN2d/eKdOMyi2YLSvlQIBFYa4=
 github.com/klauspost/cpuid/v2 v2.0.9/go.mod h1:FInQzS24/EEf25PyTYn52gqo7WaD8xa0213Md/qVLRg=
 github.com/knz/go-libedit v1.10.1/go.mod h1:MZTVkCWyz0oBc7JOWP3wNAzd002ZbM/5hgShxwh4x8M=
@@ -103,6 +105,8 @@ github.com/tidwall/shardmap v0.0.0-20190927132224-c190691bd211 h1:PiivTZ10nwpNhd
 github.com/tidwall/shardmap v0.0.0-20190927132224-c190691bd211/go.mod h1:Mrr4SdBhvY+pIzCrRJ8ZnbarljEN4ph2rh9GzjRQEWI=
 github.com/twitchyliquid64/golang-asm v0.15.1 h1:SU5vSMR7hnwNxj24w34ZyCi/FmDZTkS4MhqMhdFk5YI=
 github.com/twitchyliquid64/golang-asm v0.15.1/go.mod h1:a1lVb/DtPvCB8fslRZhAngC2+aY1QWCk3Cedj/Gdt08=
+github.com/valyala/gozstd v1.20.1 h1:xPnnnvjmaDDitMFfDxmQ4vpx0+3CdTg2o3lALvXTU/g=
+github.com/valyala/gozstd v1.20.1/go.mod h1:y5Ew47GLlP37EkTB+B4s7r6A5rdaeB7ftbl9zoYiIPQ=
 github.com/xiao7737/concurrentMap v0.0.0-20200901065754-7a2620ff00fa h1:VoIA2z+lpiq/G84QoL6xVzF5tirreLS9HrbQC3uztFs=
 github.com/xiao7737/concurrentMap v0.0.0-20200901065754-7a2620ff00fa/go.mod h1:NBjTcYwToit4Kw9WqLoR97YpDSuSlpbjdSKw23ar/Jk=
 github.com/zhangyunhao116/fastrand v0.3.0 h1:7bwe124xcckPulX6fxtr2lFdO2KQqaefdtbk+mqO/Ig=

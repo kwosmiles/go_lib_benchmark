@@ -2,7 +2,6 @@ package jsontest
 
 import (
 	"golibbenchmark/benchparam"
-	"runtime"
 	"testing"
 
 	"github.com/mailru/easyjson"
@@ -46,7 +45,6 @@ func benchmarkMarshalbig(b *testing.B, m JsonLib) {
 
 // benchmarkUnmarshal
 func benchmarkUnMarshalsmall(b *testing.B, m JsonLib) {
-	runtime.GC()
 	b.ResetTimer()
 
 	b.Run("UnMarshal-small", func(tb *testing.B) {
@@ -57,7 +55,6 @@ func benchmarkUnMarshalsmall(b *testing.B, m JsonLib) {
 }
 
 func benchmarkUnMarshalmedium(b *testing.B, m JsonLib) {
-	runtime.GC()
 	b.ResetTimer()
 
 	b.Run("UnMarshal-medium", func(tb *testing.B) {
@@ -68,7 +65,6 @@ func benchmarkUnMarshalmedium(b *testing.B, m JsonLib) {
 }
 
 func benchmarkUnMarshalbig(b *testing.B, m JsonLib) {
-	runtime.GC()
 	b.ResetTimer()
 
 	b.Run("UnMarshal-big", func(tb *testing.B) {
@@ -153,34 +149,31 @@ func benchmarkMarshal_M_e_big(b *testing.B) {
 
 // benchmarkUnmarshal
 func benchmarkUnMarshal_M_e_small(b *testing.B) {
-	runtime.GC()
 	b.ResetTimer()
 
 	b.Run("UnMarshal-small", func(tb *testing.B) {
 		for i := 0; i < tb.N; i++ {
-			easyjson.Unmarshal([]byte(smallbytes), &smallStruct)
+			easyjson.Unmarshal([]byte(benchparam.Smallbytes), &smallStruct)
 		}
 	})
 }
 
 func benchmarkUnMarshal_M_e_medium(b *testing.B) {
-	runtime.GC()
 	b.ResetTimer()
 
 	b.Run("UnMarshal-medium", func(tb *testing.B) {
 		for i := 0; i < tb.N; i++ {
-			easyjson.Unmarshal([]byte(mediumbytes), &mediumStruct)
+			easyjson.Unmarshal([]byte(benchparam.Mediumbytes), &mediumStruct)
 		}
 	})
 }
 
 func benchmarkUnMarshal_M_e_big(b *testing.B) {
-	runtime.GC()
 	b.ResetTimer()
 
 	b.Run("UnMarshal-big", func(tb *testing.B) {
 		for i := 0; i < tb.N; i++ {
-			easyjson.Unmarshal([]byte(bigbytes), &bigStruct)
+			easyjson.Unmarshal([]byte(benchparam.Bigbytes), &bigStruct)
 		}
 	})
 }
